@@ -1,4 +1,13 @@
-const repeatString = function() {
+const repeatString = function(word, number) {
+    
+    var str = word.toString();
+    var finishedStr = '';
+
+    for (i=0; i<number; i++){
+        finishedStr = finishedStr + str;
+    }
+
+    return finishedStr;
 
 };
 
