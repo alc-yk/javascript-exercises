@@ -1,8 +1,14 @@
-const removeFromArray = function(argarray, remove) {
+const removeFromArray = function(argarray, ...removeObj) {
     
+
     for(i=0; i<argarray.length; i++){
-        if(argarray[i] === remove){
-            argarray.splice(i, 1);
+
+        for(j=0; j<removeObj.length; j++){
+
+            if(argarray[i] === removeObj[j]){
+            argarray.splice(i, 1); 
+            i--;
+            }
         }
     }
 
